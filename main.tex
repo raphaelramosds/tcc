@@ -1,0 +1,210 @@
+\documentclass[
+	12pt,	
+	a4paper,			
+	english,			
+	french,				
+	spanish,			
+	brazil,
+	oneside,
+	sumario=tradicional
+	]{abntex2}
+
+\renewcommand{\ABNTEXchapterfont}{\fontfamily{cmr}\fontseries{b}}
+
+% \renewcommand{\ABNTEXchapterfontsize}{\huge}
+% \renewcommand{\ABNTEXsectionfontsize}{\large}
+% \renewcommand{\ABNTEXsubsectionfontsize}{\large}
+
+\usepackage{hyperref}
+
+\usepackage[T1]{fontenc}		
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{color}				
+\usepackage{graphicx}		
+\usepackage{microtype} 	
+\usepackage{lipsum}
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
+\usepackage{gensymb}
+\usepackage{subfigure}
+
+
+\titulo{\Large{Título}}
+\autor{ \textmd{Componente 1 \\ 
+        Componente 2 \\ 
+        Componente 3} }
+    
+% \local{\textmd{Natal -- RN}}
+\data{\textmd{Natal, Novembro de 2019}}
+
+
+\orientador{Nome do orientador}
+% \coorientador{Equipe \abnTeX}
+\instituicao{%
+  Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte
+  \par
+  Curso Técnico de Informática para Internet
+  \par
+  Campus Natal -- Zona Norte}
+
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+    \hypersetup{
+    		pdftitle={\@title}, 
+    		pdfauthor={\@author},
+    	    pdfcreator={LaTeX with abnTeX2},
+    		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+    		colorlinks=false,       		
+        	linkcolor=black,          	
+        	citecolor=black,        	
+        	filecolor=black,      	
+    		urlcolor=black,
+    		bookmarksdepth=4
+    }
+\makeatother
+
+\makeatletter
+    \setlength{\@fptop}{5pt} 
+\makeatother
+
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{0.2cm} 
+
+\makeindex
+
+\begin{document}
+
+\selectlanguage{brazil}
+\frenchspacing 
+
+\pretextual 
+
+\imprimircapa
+\imprimirfolhaderosto
+
+\begin{folhadeaprovacao}
+
+  \preambulo{Relatório de Prática Profissional apresentado à Banca Examinadora como parte do requisito parcial para obtenção do título de Técnico em Informática para Internet pelo Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte.}
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center}
+    \vspace*{\fill}
+    
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        \imprimirpreambulo
+        
+    \end{minipage}%
+    \vspace*{\fill}
+   \end{center}
+    
+    \begin{center}
+        \large{Banca examinadora:}
+    \end{center}
+    \assinatura{\imprimirorientador \\ Orientador\\IFRN }
+    \assinatura{Assinante 1 \\ IFRN}
+    \assinatura{Assinante 2 \\ IFRN}
+    %\assinatura{\textbf{Professor} \\ Convidado 3}
+    %\assinatura{\textbf{Professor} \\ Convidado 4}
+    \vspace{2cm}      
+%   \begin{center}
+%     \vspace*{1cm}
+%     {\large\imprimirlocal}
+%     \par
+%     {\large\imprimirdata}
+%     \vspace*{1cm}
+%   \end{center}
+  
+\end{folhadeaprovacao}
+
+\setlength{\absparsep}{18pt} 
+
+\begin{resumo}
+
+
+ \textbf{Palavras-chave}: 
+\end{resumo}
+
+% resumo em inglês
+\begin{resumo}[Abstract]
+ \begin{otherlanguage*}{english}
+    
+    \vspace{\onelineskip}
+ 
+   \noindent 
+   \textbf{Keywords}: 
+ \end{otherlanguage*}
+\end{resumo}
+
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+\begin{siglas}
+    \item[SIGLA] Significado
+\end{siglas}
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+
+\textual
+
+\chapter{Introdução}
+
+
+
+\section{Problemática}
+
+
+\section{Justificativas}
+
+
+
+
+\section{Organização do documento}
+
+
+
+\chapter{Desenvolvimento}
+
+
+
+\section{Trabalhos Relacionados}
+
+
+
+\section{Materiais e métodos}
+
+\chapter{Resultados}
+
+\chapter{Conclusão}
+
+% Apendice
+
+% \begin{apendicesenv}
+%     \partapendices
+%     \chapter{Primeiro}
+    
+% \end{apendicesenv}
+
+% Anexos
+
+% \begin{anexosenv}
+%     \partanexos
+%     \chapter{Primeiro}
+% \end{anexosenv}
+
+
+\bibliography{references}
+
+
+\end{document}
